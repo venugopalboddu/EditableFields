@@ -1,0 +1,30 @@
+<div class="row m-4"> 
+    <div class="col-md-10 offset-md-1"> 
+    <div class="card m-4">
+    <h3 class="card-header text-center"><b style="color: rgb(112, 7, 7)">Edit Fields</b></h3>
+    <div class="card-body">
+        <input [(ngModel)]='searchText' class="form-control" placeholder="Search by Firstname or Lastname"><br/>
+        <table class="table table-bordered" >
+          <tr>
+            <th>Sno</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Action</th>
+          </tr>
+        <tr *ngFor='let data of fdata|search:searchText,let i=index'>
+            <td>{{i+1}}</td>
+        <td ><input [(ngModel)]='data.fname' class="form-control" #fname='ngModel'  required >
+            <div *ngIf='fname.invalid && (fname.touched ||submitted)'  class="text-danger">
+            <p *ngIf='fname.errors.required'>firstname is required</p>
+        </div></td>
+        <td ><input [(ngModel)]='data.lname' class="form-control" #lname='ngModel' required>
+          <div *ngIf='lname.invalid && (lname.touched || submitted)' class="text-danger">
+          <p *ngIf='lname.errors.required'>lastname is required</p>
+        </div></td>
+        <td><button class='btn btn-success' (click)='up(data)'>Update</button></td>
+        </tr>
+        </table>
+</div>
+</div>
+</div>
+</div>

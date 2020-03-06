@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "fname": "Venugopal",
+      "lname": "Boddu"
+    },
+    {
+      "id": 2,
+      "fname": "Akram",
+      "lname": "Shaik"
+    },
+    {
+      "id": 3,
+      "fname": "Prasanna",
+      "lname": "Kumar"
+    },
+    {
+      "id": 4,
+      "fname": "Mahesh",
+      "lname": "Rapolu"
+    }
+  ]
+}
